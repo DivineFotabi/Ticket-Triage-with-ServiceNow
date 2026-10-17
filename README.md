@@ -5,8 +5,13 @@ I built a live ticket queue in serviceNow and imported a live alert to it. I wor
 
 # Skill Learned
 - ServiceNow
+- Set priority, impact, urgency and assignment group.
+- Update ticket states: New, In Progress, On Hold and Resolved.
 
 # Tools 
 - ServiceNow
 
 # Setup/ Steps
+- 
+
+
