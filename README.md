@@ -33,4 +33,8 @@ I built a live ticket queue in serviceNow and imported a live alert to it. I wor
 
 <img width="2071" height="1345" alt="image" src="https://github.com/user-attachments/assets/6e6ceb90-6d1d-4c7a-b9d8-2733a698e90e" />
 
+AV. Detection
+
+<img src= "https://github.com/DivineFotabi/Ticket-Triage-with-ServiceNow/blob/02a771d2521180d9e62284923c35874a5011f080/av%20detection.png" />
+
 
