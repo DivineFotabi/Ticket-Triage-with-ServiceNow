@@ -4,13 +4,16 @@
 I built a live ticket queue in serviceNow and imported a live alert to it. I worked the mixed with explanation, evidence, severity over time. Noticed and active credential stealer and contained it, clear the false positive with proof.
 
 # Skill Learned
-- ServiceNow Alert Triage
-- Incident Investigation
-- Ticket Management
-- Email header analysis
-- Shift handover documentation
-- Sign-in analysis
-- MITRE ATT&ck mapping
+-  Alert Triage
+-  severity assessment (impact x confidence)
+-  True vs False positive
+-  Judgment
+-  Duplicate handling
+-  Escalation discipline
+-  Evidence pivoting
+-  Verdict writing
+-  ServiceNow fundamentals (import sets, incidents, work notes, resolution
+-  MITRE ATT&ck mapping
 - 
 
 # Tools 
