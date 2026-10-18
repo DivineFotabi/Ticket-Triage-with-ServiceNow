@@ -223,7 +223,8 @@ Duplicate and refrence to CLD-0102
 # Justification
 Presence of an active malware
 
-# MITRE: Same as CLD-0102
+# MITRE:
+Same as CLD-0102
 
 # Alert CLD-0107
 
