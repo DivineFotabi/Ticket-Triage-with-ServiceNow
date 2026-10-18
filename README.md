@@ -111,6 +111,51 @@ T1204.002 ( User execution : Malicious file )
 
 # Alert CLD-0103
 
+Probed 4000+ TCP port scan across 180 internal host between 22:10 and 02:05 UTC
 
+# Hypothesis
 
+malicious: Identification of entry point for exploitation.
+Benign: Routine testing carried out by the administrator.
 
+# Evidence
+Handover schedule scan activity on the network at thesame time of the alert on all offices and source address matches. No activity of data moving hence scanner behavior.
+
+# verdict
+
+False positive
+
+# serverity
+
+Reported medium but re-rated informational. Scheduled activity recorded.
+
+# Action
+
+Close reference schedule scan. Recommend security controls during approved or authorised scans
+
+# Justification
+Host, action, address and time matches the scheduled action of weekly scan. No data moving indicates scanner behavior.
+
+# Alert CLD-0104
+
+Five MFA failures for a user and followed by a successful sign-in at 6:52 UTC and a new device register for authentication.
+
+# Hypothesis
+Malicious: MFA attempts on user
+Benign: Company policy on staff for new devices, lockout and travel.
+
+# Evidence:
+Sign-in logs shows all events came thesame source 198.51.100.22 from usual device. Helpdesk ticket raised at 7.05 HD-4471 and Handover notes shows a Helpdesk activity that states staff shouls contact helpdesk incase of new device.
+
+# verdict
+False Positive
+
+# Severity
+Reported medium but re-rated informational as the action was stated in the handovershift notes.
+
+# Action
+close with reference Helpdesk and ticket reference HD.
+
+# Justification
+
+Ticket referenced, action time and account matches the Helpdesk notes. Event matches baseline and shows a users fighting her own authentication.
