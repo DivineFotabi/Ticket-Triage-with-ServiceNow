@@ -1,9 +1,9 @@
 ## Ticket-Triage-with-ServiceNow
 
-# Objective
+## Objective
 I built a live ticket queue in serviceNow and imported a live alert to it. I worked the mixed with explanation, evidence, severity over time. Noticed and active credential stealer and contained it, clear the false positive with proof.
 
-# Skill Learned
+## Skill Learned
 -  Alert Triage
 -  severity assessment (impact x confidence)
 -  True vs False positive
@@ -16,13 +16,13 @@ I built a live ticket queue in serviceNow and imported a live alert to it. I wor
 -  MITRE ATT&ck mapping
 - 
 
-# Tools 
+## Tools 
 - ServiceNow
 - Sign-in Logs
 - MITRE ATT&CK Framework
 - Header analysis
 
-# Setup/ Steps
+## Setup/ Steps
 - Imported the live tickets.
 - I Wrote the alert.
 - I wrote the verdict.
@@ -36,5 +36,53 @@ I built a live ticket queue in serviceNow and imported a live alert to it. I wor
 AV. Detection
 
 <img src= "https://github.com/DivineFotabi/Ticket-Triage-with-ServiceNow/blob/02a771d2521180d9e62284923c35874a5011f080/av%20detection.png" />
+
+Handover Notes
+
+<img src= "https://github.com/DivineFotabi/Ticket-Triage-with-ServiceNow/blob/2d8464576ba2551007a14c71150ae18be7e09927/Handover%20Notes.png" />
+
+## Triage Verdict
+
+# Alert CLD-0101: 
+
+Multiple authentication entra Id failures for SVC-backup between 23:41 and 00:03 UTC followed by a successful sign-in at 00:14 UTC. Reported high
+
+# Hypothesis
+
+Malicious: Multiple brute force attempts on svc-backup account
+Benign: Backup platform credential rotation running
+
+# Evidence
+
+From Handover Notes the activity CHG-2088 mentioned a backupcredential running at the same time interval of the alert with brief authentication failures. The sign-in logs shows source LDN-SRV-BK1 ( 203.0.113.20 ) is and internal host server address
+
+# Verdict
+
+False Positive
+
+# Severity
+
+Reported high was re-rated Informational. Activity was scheduled at the expected time interval.
+
+# Action
+
+Closed with reference CHG-2008 and recommend reviewing the login flow and implimenting clear error handling and security controls during scheduled passwords rotations.
+
+# Justification
+
+Source host, alert time, all matches on the handover notes. A brute force attempt is not initiated by by the internal server and cannnot end immediately as the password rotation occured. 
+
+# Alert CLD-0102
+
+Trojan Win32/stealgen.B ( credential stealer ) detected on user ( liam.doyle ) followed by faile quarantine each time and recreates itself. Reported high
+
+# Hypothesis
+
+Malicious: Credential stealer malware installed on user liam. doyle machine and recreats as a means to stay in the system.
+Benign: Alert about and already treated problem.
+
+# Evidence
+
+Detection Av logs shows that a clean scan completed at 22:14 UTC , second scan logs shows the presence of a trojan in the APPdata folder as an executable file 
 
 
