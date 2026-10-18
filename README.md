@@ -159,3 +159,44 @@ close with reference Helpdesk and ticket reference HD.
 # Justification
 
 Ticket referenced, action time and account matches the Helpdesk notes. Event matches baseline and shows a users fighting her own authentication.
+
+# Alert CLD-0105
+
+From James holt, email recived from payroll@cloudora with subject "you August payslip is ready" and a clickable link. Reported medium
+
+# Hypothesis
+
+malicious: A phishing attempt spoofing the cloudora domain name
+Benign: A payroll email from the HR.
+
+# Evidence
+
+From the email header confirms to be from the real domain the cloudora domain. All authentication header's pass for the cloudora.io domain name. From the recieved header, the message came from the cloudora server and was recieved by thesame cloudora server.
+
+# Verdict
+
+False positive
+
+# Severity
+
+Informational. legit internal email
+
+# Action
+
+Reply to james: This was a genuine mail n keep reporting anything you don't find comfortable.
+
+# Justification
+
+The alert was from a policy set and a proof to show the policy is working.
+
+# Alert CLD-0106
+
+Device LDN-WS-117 with active unresolved threats. Reported medium.
+
+# Hypothesis
+malicious:The device LDN-WS-117 is compromise
+Benign: Duplicated threat alert.
+
+# Evidence
+The defender daily digest for antivirus decords the same trojan : win32/ stealgen B on thesame device LDN-WS-117 at 8:00 UTC
+Reported medium but re-rated Informational
