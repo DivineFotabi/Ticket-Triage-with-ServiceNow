@@ -83,6 +83,34 @@ Benign: Alert about and already treated problem.
 
 # Evidence
 
-Detection Av logs shows that a clean scan completed at 22:14 UTC , second scan logs shows the presence of a trojan in the APPdata folder as an executable file 
+Detection Av logs shows that a clean scan completed at 22:14 UTC , second scan logs shows the presence of a trojan in the APPdata folder as an executable file ( wsync.exe) with a failed quarantine and file in use. The access denied log at 2:27 UTC and a subsequent recreation of the file as wsync_upd.exe at 2:41 UTC and file becomes in use again in the same folder.No such activity in the handover notes and no suspicious login from user.
+
+# Verdict
+
+True Positive
+
+# Severity
+
+ Sev 2. File recreating faster than the antivirus can kill it.
+
+ # Action
+
+ - Isolate the user
+ - Revoke session
+ - Restrict the User
+ - Eradicate the malware
+ - Change login credentials of the user
+
+# Justification
+
+Multiple quarantine failures and file recreation shows the presence of a malware in action.
+
+# MITRE ATT&CK
+
+T1204.002 ( User execution : Malicious file ) 
+
+# Alert CLD-0103
+
+
 
 
