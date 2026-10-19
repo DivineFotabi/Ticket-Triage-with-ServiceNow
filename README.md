@@ -401,3 +401,25 @@ A real compromised user will show interaction in the login. Here all the action 
 
 # MITRE ATT&CK
 None
+
+
+## End of Shift Summary
+
+| Alert | Verdict | Sev | Action |
+|-------|---------|-----|--------|
+| CLD-0101 | False positive (change window CHG-2088) | Informational | Closed |
+| CLD-0102 | True positive: active credential stealer | Sev 2 |  Isolated; revoke session; user creds reset |
+| CLD-0103 | False positive (authorised scanner) | Informational | Closed; scoped IDS exception rec |
+| CLD-0104 | False positive (user error, HD-4471) | Informational | Closed |
+| CLD-0105 | False positive (genuine payslip mail) | Informational | Closed and thanked the reporter |
+| CLD-0106 | Duplicate of CLD-0102 | None |  Closed; connector correlation |
+| CLD-0107 | False positive (HR retention flow) | Informational |  Closed; rule exclusion |
+| CLD-0108 | True positive: credential compromise | Sev 2 |  Contained; incident; legacy authentication block |
+| CLD-0109 | Escalated (multi-site beaconing) | Sev interim | Escalate to vCISO/IR with more information requested |
+| CLD-0110 | TP activity, blocked; monitoring | Low | Re-raise condition set; CLD-0001 noted |
+| CLD-0111 |  Insufficient data; gathering | High | On hold: Insufficient information |
+| CLD-0112 | False positive (travel + token refresh) | Info Closed; rule applied | 
+
+## Conclusion
+Twelve alerts: two true positives, one escalation, one monitor, one hold for evidence, seven false
+positives with six different root causes. 
